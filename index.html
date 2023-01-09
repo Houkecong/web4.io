@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>挑选纹样</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+
+        .back {
+            background-image: url('./选布（分好_0011_背景.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .stick_back {
+            left: 12%;
+            height: 100%;
+            width: 75%;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .cloth1 {
+            height: 60%;
+            width: 10%;
+            left: 22%;
+            top: 6%;
+            position: absolute;
+            z-index: 4;
+        }
+
+        .cloth1:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(10px 10px 30px white);
+        }
+
+        .cloth2 {
+            height: 50%;
+            width: 12%;
+            left: 38%;
+            top: 10%;
+            position: absolute;
+            z-index: 4;
+        }
+
+        .cloth2:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(10px 10px 30px white);
+        }
+
+        .cloth3 {
+            height: 70%;
+            width: 12%;
+            left: 48%;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .cloth3:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(10px 10px 30px white);
+        }
+
+        .cloth4 {
+            height: 60%;
+            width: 14%;
+            left: 63%;
+            top: 4%;
+            position: absolute;
+            z-index: 4;
+        }
+
+        .cloth4:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(10px 10px 30px white);
+        }
+
+        .stick_left {
+            left: 46%;
+            height: 16%;
+            width: 38%;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .guide {
+            height: 50%;
+            width: 12%;
+            left: 10%;
+            top: 16%;
+            position: absolute;
+            z-index: 5;
+            animation: guide_show 3s;
+        }
+
+        .music_sign {
+            height: 15%;
+            width: 5%;
+            right: 5%;
+            top: 5%;
+            position: absolute;
+            z-index: 5;
+        }
+
+        .next_sign {
+            height: 15%;
+            width: 15%;
+            left: 75%;
+            top: 82%;
+            position: absolute;
+            z-index: 5;
+            opacity: 0;
+        }
+        .next_sign:hover{
+            filter: drop-shadow(10px 10px 30px white);
+        }
+
+        @keyframes guide_show {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <script>
+        var cloth = 0;
+        function choose(n) {
+            cloth = n;
+            document.getElementsByClassName('next_sign')[0].style.opacity = 1;
+        }
+        function go(){
+            location.assign("../5刻板/index.html");
+        }
+        
+    </script>
+</head>
+<div class="back"></div>
+<div class="stick_back"><img src="./选布（分好_0010_杆.png"> </div>
+<div class="cloth3" onclick="choose(3)"><img src="./选布（分好_0009_布3.png"></div>
+<div class="cloth1" onclick="choose(1)"><img src="./选布（分好_0004_布1.png"></div>
+<div class="stick_left"><img src="./选布（分好_0008_杆.png"></div>
+<div class="cloth4" onclick="choose(4)"><img src="./选布（分好_0005_布4.png"></div>
+<div class="cloth2" onclick="choose(2)"><img src="./选布（分好_0007_布2.png"></div>
+<div class="guide"><img src="./选布（分好_0002_请挑选.png"></div>
+<div class="music_sign"><img src="./选布（分好_0000_音乐.png"></div>
+<div class="next_sign" onclick="go()"><img src="./选布（分好_0001_我选好啦.png"></div>
+
+<body>
+
+</body>
+
+</html>
